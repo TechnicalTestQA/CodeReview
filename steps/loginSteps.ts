@@ -2,7 +2,6 @@ import { Given, When, Then } from '@wdio/cucumber-framework';
 import { expect, $ } from '@wdio/globals'
 
 import LoginPage from '../pages/LoginPage';
-import HomePage from '../pages/HomePage';
 
 Given('I am on the login page', async () => {
   await LoginPage.open();
