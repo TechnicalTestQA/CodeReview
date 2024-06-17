@@ -1,4 +1,4 @@
-Feature: The Internet Guinea Pig Website
+Feature: Login
 
   Scenario: Login
     Given I am on the login page
