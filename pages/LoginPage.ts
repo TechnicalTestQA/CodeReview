@@ -1,6 +1,5 @@
-import { $ } from '@wdio/globals'
+import { $, browser } from '@wdio/globals'
 import Page from './page';
-import HomePage from './HomePage';
 
 class LoginPage extends Page {
   public get inputUsername () { return $('#credentials-section .username-input'); }
@@ -9,19 +8,11 @@ class LoginPage extends Page {
   public get hotelSearchSection () { return $('//div[contains(@class, "home-container")]/following-sibling::div[@id="hotel-search-container"]'); }
 
   open () {
-    return super.open('login');
-  }
-
-  async clickUsername() {
-    await this.inputUsername.click();
+    return browser.url(`https://example.com/login`);
   }
 
   async enterUsername(username) {
     await this.inputUsername.setValue(username);
-  }
-
-  async clickPassword() {
-    await this.inputPassword.click();
   }
 
   async enterPassword(password) {
